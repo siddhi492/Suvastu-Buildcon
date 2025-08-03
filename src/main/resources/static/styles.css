@@ -76,7 +76,7 @@ body {
 
 /* ==== INDEX PAGE BACKGROUND (specific) ==== */
 body.index-page {
-  background: url('background.jpg') center center / cover no-repeat fixed;
+  background: url('background.jpg') center center / cover no-repeat;
 }
 
 /* ==== UTILITY ==== */
