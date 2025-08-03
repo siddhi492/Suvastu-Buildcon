@@ -1,24 +1,23 @@
-// Contact form submission animation
 const form = document.getElementById("contactForm");
 
 if (form) {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
     const button = form.querySelector("button");
     button.disabled = true;
     button.textContent = "Sending...";
 
-    fetch("http://localhost:8080/api/contact", {
+    fetch("https://suvastubuildcon.onrender.com/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message })
+      body: JSON.stringify({ name, email, message }),
     })
-      .then(res => {
+      .then((res) => {
         if (res.ok) {
           button.textContent = "Message Sent!";
           button.style.backgroundColor = "#2ecc71";
@@ -34,7 +33,7 @@ if (form) {
           button.style.backgroundColor = "";
         }, 2500);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error("JavaScript Fetch Error:", err);
         alert("Something went wrong.");
         button.disabled = false;

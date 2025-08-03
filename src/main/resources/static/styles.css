@@ -448,3 +448,72 @@ body.services-page .card p {
     width: 90vw;
   }
 }
+/* ===== RESPONSIVE ADDITIONS ===== */
+
+/* Contact Page Responsive */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 20px 30px;
+    height: auto; /* Screen-fit नको छोट्या स्क्रीनसाठी */
+  }
+
+  .contact-card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Navbar responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 12px;
+  }
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .logo {
+    height: 70px;
+  }
+}
+
+/* Gallery grid responsive */
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 15px 30px 15px;
+    gap: 10px;
+  }
+}
+
+/* About & Services page cards stack on small screens */
+@media (max-width: 768px) {
+  body.about-page .card-container,
+  body.services-page .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body.about-page .card,
+  body.services-page .card {
+    width: 90vw;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nav-links li a {
+    font-size: 0.9rem;
+  }
+  .contact-container {
+    padding: 15px 20px;
+  }
+  .contact-card {
+    padding: 20px;
+  }
+}
+
