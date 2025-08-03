@@ -532,3 +532,48 @@ body.services-page .card p {
     overflow: hidden;
   }
 }
+/* === FIX: Index Page Fullscreen (Mobile tweak added) === */
+body.index-page {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  body.index-page {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+}
+
+/* === FIX: About Page Fit (no scroll, layout preserved) === */
+body.about-page {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.about-page main {
+  height: calc(100vh - 120px); /* Adjust if needed */
+  overflow-y: auto;
+}
+
+/* === FIX: Contact Page Fit (no scroll, internal content scroll only if needed) === */
+.contact-page {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contact-container {
+  height: calc(100vh - 120px); /* Adjust if navbar/logo height differs */
+  overflow-y: auto;
+}
+
