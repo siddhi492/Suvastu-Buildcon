@@ -516,4 +516,10 @@ body.services-page .card p {
     padding: 20px;
   }
 }
+@media (max-width: 480px) {
+  body.index-page {
+    background-position: center top;
+    background-size: cover;
+  }
+}
 
